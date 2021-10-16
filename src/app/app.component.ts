@@ -12,10 +12,11 @@ export class AppComponent {
   btn!: ElementRef
 
   title = 'tailwind-ui';
+  open = false
   constructor(private matDialog: MatDialog) {
     
   }
   openModal() {
-    this.matDialog.open(ModalComponent, { panelClass: 'modal', data: { element: this.btn.nativeElement } })
+    this.matDialog.open(ModalComponent, { panelClass: 'search-dialog-modal', data: { element: this.btn.nativeElement } })
   }
 }

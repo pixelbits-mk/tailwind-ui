@@ -7,16 +7,16 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.modal {
+.search-dialog-modal {
     max-width: 100vw!important;
 }
-.modal .mat-dialog-container{
+.search-dialog-modal .mat-dialog-container{
     padding: 0px!important;
     margin: 0px!important;
 }
 
 @media (max-width: 479px) {
-    .modal {
+    .search-dialog-modal {
 
         min-width: 100vw!important;
         max-width: 100vw!important;
@@ -27,7 +27,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
     .destination-list {
         height: 100%!important;
-        
+ 
     }
 
 }
