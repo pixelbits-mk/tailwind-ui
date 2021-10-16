@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
 
@@ -8,11 +8,14 @@ import { ModalComponent } from './modal/modal.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('btn', { read: ElementRef })
+  btn!: ElementRef
+
   title = 'tailwind-ui';
   constructor(private matDialog: MatDialog) {
     
   }
   openModal() {
-    this.matDialog.open(ModalComponent, { panelClass: 'modal'})
+    this.matDialog.open(ModalComponent, { panelClass: 'modal', data: { element: this.btn.nativeElement } })
   }
 }
